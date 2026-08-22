@@ -3,12 +3,13 @@ import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
-    title: "Nexus Logistics Portal",
-    category: "Custom Web Application",
-    metric: "Replaced 5 legacy systems",
-    desc: "A real-time tracking dashboard and driver management system built with React and Node.js.",
-    url: null,
-  },
+    
+      title: "Nexus Logistics Portal",
+      category: "Custom Web Application",
+      metric: "Replaced 5 legacy systems",
+      desc: "A real-time tracking dashboard and driver management system built with React and Node.js.",
+      url: null,
+    },
   {
     title: "Aura Boutique",
     category: "E-Commerce Website",
