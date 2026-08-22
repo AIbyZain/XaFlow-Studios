@@ -1,0 +1,74 @@
+# Fix Netlify 404 Error on Page Refresh
+
+ROLE:
+
+You are an expert React, Vite, React Router, and Netlify deployment engineer.
+
+CONTEXT:
+
+My website is built as a React/Vite Single Page Application and deployed on Netlify.
+
+The website navigation works correctly when users click links inside the website. However, refreshing a route such as:
+
+/work
+/services
+/process
+/pricing
+
+causes a Netlify "Page not found" 404 error.
+
+For example:
+
+https://xaflowstudios.netlify.app/work
+
+works when navigating from the homepage, but refreshing the page shows a 404 error.
+
+OBJECTIVE:
+
+Fix SPA routing on Netlify so that every frontend route loads correctly, even after a browser refresh or when a user directly visits a URL.
+
+TASKS:
+
+1. First inspect the existing project structure.
+2. Identify whether the project is using React Router or another client-side routing system.
+3. Do not change, remove, or redesign any existing pages, components, routes, styles, animations, or functionality.
+4. Add the correct Netlify SPA redirect configuration.
+
+PRIMARY SOLUTION:
+
+Create a file named exactly:
+
+public/_redirects
+
+Add this exact rule:
+
+/*    /index.html   200
+
+IMPORTANT:
+
+* The file must be named `_redirects` with no file extension.
+* For a Vite project, place it inside the `public` folder so it is copied into the final build output.
+* Verify that the final deployed build will contain the `_redirects` file.
+
+ALTERNATIVE:
+
+If the project already uses `netlify.toml`, or if using it is more appropriate, configure the SPA redirect there instead:
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
+
+Do not create conflicting redirect configurations unnecessarily. Prefer one correct solution.
+
+FINAL VERIFICATION:
+
+Make sure these routes work both through internal navigation and direct browser access/refresh:
+
+/
+/work
+/services
+/process
+/pricing
+
+After making the changes, explain exactly which file was added or modified and confirm that the existing website design and functionality were not changed.
