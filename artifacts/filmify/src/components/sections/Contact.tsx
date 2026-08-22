@@ -4,7 +4,21 @@ import { Button } from "@/components/ui/button";
 export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Thanks for reaching out. We will be in touch shortly.");
+
+    const formData = new FormData(e.currentTarget as HTMLFormElement);
+    const name = String(formData.get("name") ?? "").trim();
+    const projectType = String(formData.get("projectType") ?? "").trim();
+    const message = String(formData.get("message") ?? "").trim();
+    const whatsappMessage = [
+      "Hello XaFlow Studios,",
+      "",
+      `Name: ${name}`,
+      `Website type: ${projectType}`,
+      `Message: ${message}`,
+    ].join("\n");
+
+    const whatsappUrl = `https://wa.me/923394567212?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -50,7 +64,7 @@ export default function Contact() {
               </div>
 
               <Button variant="brand" size="lg" type="submit" className="w-full md:w-auto px-12">
-                Send Inquiry
+                Send via WhatsApp
               </Button>
             </form>
           </div>
