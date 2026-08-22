@@ -1,56 +1,33 @@
 import { FadeIn } from "@/components/animations/FadeIn";
 import { ArrowUpRight } from "lucide-react";
+import raceOnImage from "@/assets/race-on.png";
+import roxterMotoImage from "@/assets/roxter-moto.png";
+import emberrJewelImage from "@/assets/emberr-jewel.png";
 
 const projects = [
   {
-    
-      title: "Nexus Logistics Portal",
-      category: "Custom Web Application",
-      metric: "Replaced 5 legacy systems",
-      desc: "A real-time tracking dashboard and driver management system built with React and Node.js.",
-      url: null,
-    },
-  {
-    title: "Aura Boutique",
-    category: "E-Commerce Website",
-    metric: "+120% checkout completion",
-    desc: "Headless storefront emphasizing sub-second load times and premium aesthetics.",
-    url: null,
-  },
-  {
-    title: "Quantify SaaS",
-    category: "Web Application",
-    metric: "60% reduction in load time",
-    desc: "Complete re-architecture of their marketing website and internal dashboard.",
-    url: null,
-  },
-  {
-    title: "Emberr",
-    category: "Web Design",
+    title: "RACE ON",
+    category: "Motorcycle Apparel",
     metric: "Live project",
-    desc: "A polished web presence built for performance and visual impact.",
-    url: "https://emberr.netlify.app",
+    desc: "A bold e-commerce experience for made-to-measure motorcycle racing gear.",
+    url: "https://raceongear.com/",
+    image: raceOnImage,
   },
   {
-    title: "Sugar Bliss Bakery",
-    category: "Business Website",
+    title: "Roxter Moto",
+    category: "Motorcycle Apparel",
     metric: "Live project",
-    desc: "A warm, inviting site for a bakery brand — designed to convert visitors into customers.",
-    url: "https://sugarblissbake.netlify.app",
+    desc: "A premium digital presence for a motorcycle apparel manufacturer and exporter.",
+    url: "https://roxtermoto.com/",
+    image: roxterMotoImage,
   },
   {
-    title: "Surplis Clothing",
-    category: "E-Commerce Website",
+    title: "Emberr Jewel",
+    category: "Jewellery E-Commerce",
     metric: "Live project",
-    desc: "A clean, modern storefront for a clothing brand with a focus on seamless shopping.",
-    url: "https://surplisclothing.netlify.app",
-  },
-  {
-    title: "WAH Apartments",
-    category: "Real Estate Website",
-    metric: "Live project",
-    desc: "A professional property listing site designed to attract and convert prospective tenants.",
-    url: "https://wahappartments.netlify.app",
+    desc: "An elegant jewellery storefront where refined visual design meets effortless browsing.",
+    url: "https://emberr.netlify.app/",
+    image: emberrJewelImage,
   },
 ];
 
@@ -67,6 +44,12 @@ export default function Portfolio() {
           {projects.map((project, idx) => {
             const card = (
               <div className="group relative rounded-2xl overflow-hidden bg-white/[0.02] border border-white/5 h-[400px] flex flex-col justify-end p-8 hover:border-brand/30 transition-all cursor-pointer">
+                <img
+                  src={project.image}
+                  alt={`${project.title} website preview`}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/10" />
                 <div className="absolute inset-0 bg-brand/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="absolute top-6 right-6 w-10 h-10 rounded-full bg-white/5 flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
                   <ArrowUpRight size={20} className="text-white" />

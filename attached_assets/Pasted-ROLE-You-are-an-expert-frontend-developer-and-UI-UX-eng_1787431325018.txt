@@ -1,0 +1,60 @@
+ROLE: 
+You are an expert frontend developer and UI/UX engineer. Update my existing Projects/Work section without changing the overall XaFlow Studios design, layout, colors, typography, spacing, or existing animations. 
+ 
+CONTEXT: 
+I currently have 3 project cards: 
+ 
+1. Ember Jewelery 
+2. Aura Boutique 
+3. Country SaaS 
+ 
+I will provide you with 3 project image URLs and 3 project website URLs. 
+ 
+OBJECTIVE: 
+Add a real project preview image to each project card. Each card should become clickable and redirect the user to the corresponding live project website. 
+ 
+IMPLEMENTATION REQUIREMENTS: 
+ 
+1. Do not redesign the section. 
+2. Keep the existing card layout exactly the same. 
+3. Use the existing dark green XaFlow Studios theme. 
+4. Add the project image inside each card as the main visual element. 
+5. The image should fill the card naturally using: 
+   - width: 100% 
+   - appropriate height 
+   - object-fit: cover 
+   - rounded corners matching the existing card design 
+6. Keep the existing project title, category, description, and badge visible. 
+7. Add a subtle dark overlay or gradient on the image if needed to maintain text readability. 
+8. Each entire project card should be clickable. 
+9. On click, open the provided project website URL in a new browser tab. 
+10. Add a subtle hover effect: 
+    - Slight image zoom 
+    - Smooth transition 
+    - Card border or glow using the existing lime green XaFlow accent 
+    - Cursor should change to pointer 
+11. Maintain full responsiveness for desktop, tablet, and mobile. 
+12. Do not break any existing functionality. 
+13. Do not remove existing animations or styling. 
+ 
+USE THIS DATA STRUCTURE: 
+ 
+Project 1: 
+Name: RACE ON 
+Image URL: image_named project 1 
+Website URL: https://raceongear.com/ 
+ 
+Project 2: 
+Name: Roxter Moto 
+Image URL: image_named project 2 
+Website URL: https://roxtermoto.com/ 
+ 
+Project 3: 
+Name: Emberr Jewel 
+Image URL: image named project 3 
+Website URL: https://emberr.netlify.app/
+
+IMPORTANT:
+Use the project image URLs exactly as I provide them. Make each project card link to its matching website URL. Do not use placeholder images. Do not change the existing XaFlow Studios branding or redesign any other section of the website.
+
+First, inspect my existing code and identify the component responsible for these project cards. Then update only the necessary files.
