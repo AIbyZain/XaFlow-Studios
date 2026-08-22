@@ -105,4 +105,24 @@
     background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
                       linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
   }
+
+  .testimonial-float {
+    animation: testimonial-float 6s ease-in-out infinite;
+    will-change: transform;
+  }
+
+  @keyframes testimonial-float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .testimonial-float {
+      animation: none;
+    }
+  }
 }

@@ -1,0 +1,27 @@
+ROLE: You are a senior frontend engineer specializing in GSAP-based micro-interactions and performant cursor systems.
+
+PROBLEM: Implement a custom cursor for a dark-themed agency marketing site that reads as premium/custom-built, not gimmicky.
+
+CONTEXT: 
+- Stack: React/Vite, GSAP (already installed), no Framer Motion.
+- Site is XaFlow Studios, a web dev agency site — dark background, minimal palette.
+- Target: desktop only. Must auto-disable on touch/mobile devices (no cursor on touch, do not just hide it — detect and skip mounting entirely).
+
+TASK:
+Build a two-part custom cursor:
+1. A small dot (6-8px) that follows the mouse with near-zero lag (direct position, no easing) — this is the "precision" layer.
+2. A larger ring/circle (32-40px, 1-1.5px border, no fill) that trails behind with eased/lerped movement (~0.15-0.2 lerp factor) — this is the "trailing" layer.
+
+Interaction states required:
+- On hover over links/buttons: ring scales to ~1.6x and background fills semi-transparent (or inverts), dot disappears or shrinks to nothing.
+- On hover over image/portfolio cards: ring scales larger (~2.5x) and displays a small text label inside it (e.g. "VIEW") using GSAP timeline, not CSS transition, so it can be sequenced.
+- On mousedown: ring scales down briefly (press feedback), spring back on mouseup.
+- Cursor must hide the native browser cursor (cursor: none on body) only after the custom cursor has mounted and gotten its first mousemove event — prevent a flash of no-cursor on load before JS hydrates.
+
+PERFORMANCE CONSTRAINTS:
+- Use requestAnimationFrame or GSAP's ticker for the lerp loop, not a setState-per-mousemove React re-render pattern — mousemove must never trigger React re-renders, only direct DOM/ref mutation via GSAP.quickTo() or gsap.set().
+- Use gsap.quickTo() for the dot and ring x/y properties specifically — this is the correct GSAP API for high-frequency mouse-follow, not gsap.to() called repeatedly.
+- Cursor elements should be position: fixed, pointer-events: none, top-left origin, translated via transform only (no top/left mutation).
+
+SYSTEM RULES: 
+Think step-by-step. Write the cursor as a self-contained React component (Cursor.jsx) using useRef and useEffect, cleanly unmounted on route change if this is a multi-page SPA. Add a data attribute system (e.g. data-cursor="link" / data-cursor="view") so any element in the site can opt into a cursor state without the cursor component needing to know about specific pages. Avoid vague implementations — give complete, runnable code, not pseudocode. Assume real-world usage: this ships to a live client-facing site, so it must not jank on scroll or lag on fast mouse movement.
