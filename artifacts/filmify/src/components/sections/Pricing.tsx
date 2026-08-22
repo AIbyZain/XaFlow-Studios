@@ -5,32 +5,43 @@ import { Check } from "lucide-react";
 
 const tiers = [
   {
-    name: "Starter",
-    priceLabel: "PKR 30,000",
-    usdLabel: "~$2,000 USD",
-    desc: "For simple business or marketing websites.",
+    name: "AI Website",
+    priceLabel: "PKR 18,000",
+    desc: "A polished website built with AI for businesses that need a professional online presence.",
     features: [
-      "Custom UI/UX design",
-      "Up to 5 pages",
+      "Website built with AI",
+      "Complete hosting included",
+      "Domain included",
       "Mobile-responsive build",
-      "Basic technical SEO setup",
-      "1 month of post-launch support",
+      "Basic setup and launch support",
     ],
     popular: false,
   },
   {
-    name: "Complex / Custom",
-    priceLabel: "PKR 70,000",
-    usdLabel: "~$7,000 USD",
-    desc: "For web applications, e-commerce, or multi-feature builds.",
+    name: "Developer Website",
+    priceLabel: "PKR 35,000",
+    desc: "A custom website designed and built by a developer around your brand and goals.",
     features: [
-      "Everything in Starter",
-      "Web application or e-commerce build",
-      "Authentication & user accounts",
-      "Database architecture",
-      "3rd-party API integrations",
+      "Website built by a developer",
+      "Custom UI/UX design",
+      "Complete hosting included",
+      "Domain included",
+      "Mobile-responsive build",
     ],
     popular: true,
+  },
+  {
+    name: "Animated Website",
+    priceLabel: "PKR 80,000",
+    desc: "A premium animated website with memorable motion and an elevated user experience.",
+    features: [
+      "Custom animated interactions",
+      "Premium UI/UX design",
+      "Complete hosting included",
+      "Domain included",
+      "Mobile-responsive build",
+    ],
+    popular: false,
   },
 ];
 
@@ -43,7 +54,7 @@ export default function Pricing() {
           <p className="text-white/60 text-lg">Invest in software that pays for itself. No hidden fees.</p>
         </FadeIn>
         
-        <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {tiers.map((tier, idx) => (
             <FadeIn key={idx} delay={idx * 0.1}>
               <div className={`relative p-8 rounded-2xl border ${tier.popular ? "border-brand shadow-2xl shadow-brand/10 bg-white/[0.03]" : "border-white/10 bg-white/[0.01]"} h-full flex flex-col`}>
@@ -56,7 +67,6 @@ export default function Pricing() {
                 <div className="mb-1 flex items-baseline gap-2">
                   <span className="text-3xl font-bold font-mono text-white">{tier.priceLabel}</span>
                 </div>
-                <div className="text-sm text-white/50 font-mono mb-4">{tier.usdLabel}</div>
                 <p className="text-white/50 text-sm mb-8">{tier.desc}</p>
                 
                 <ul className="space-y-4 mb-8 flex-1">
