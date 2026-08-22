@@ -11,8 +11,7 @@ export default function Footer() {
         
         <div className="flex gap-6 text-sm text-white/40">
           <a href="mailto:xaflowstudios@gmail.com" className="hover:text-brand transition-colors">xaflowstudios@gmail.com</a>
-          <a href="#" className="hover:text-white transition-colors">Twitter</a>
-          <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
+          <a href="https://www.instagram.com/xaflowstudios/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
         </div>
         
         <div className="text-sm text-white/40">
