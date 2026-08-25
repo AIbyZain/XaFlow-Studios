@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import raceOnImage from "@/assets/race-on.png";
 import roxterMotoImage from "@/assets/roxter-moto.png";
 import emberrJewelImage from "@/assets/emberr-jewel.png";
+import leovorImage from "@/assets/leovor.png";
 
 const projects = [
   {
@@ -28,6 +29,14 @@ const projects = [
     desc: "An elegant jewellery storefront where refined visual design meets effortless browsing.",
     url: "https://emberr.netlify.app/",
     image: emberrJewelImage,
+  },
+  {
+    title: "Leovor",
+    category: "Fashion E-Commerce",
+    metric: "Live project",
+    desc: "A clean, editorial storefront for a modern fashion brand with a seamless shopping experience.",
+    url: "https://leovor.com/",
+    image: leovorImage,
   },
 ];
 
