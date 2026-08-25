@@ -78,7 +78,7 @@ export default function Portfolio() {
             return (
               <FadeIn key={idx} delay={idx * 0.1}>
                 {project.url ? (
-                  <a href={project.url} target="_blank" rel="noopener noreferrer" data-cursor="view">
+                  <a href={project.url} target="_blank" rel="noopener noreferrer">
                     {card}
                   </a>
                 ) : (
