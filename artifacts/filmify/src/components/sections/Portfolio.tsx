@@ -4,6 +4,9 @@ import raceOnImage from "@/assets/race-on.png";
 import roxterMotoImage from "@/assets/roxter-moto.png";
 import emberrJewelImage from "@/assets/emberr-jewel.png";
 import leovorImage from "@/assets/leovor.png";
+import gatehouseImage from "@/assets/gatehouse-hero.png";
+import leveorSuiteImage from "@/assets/leveor-suite-hero.png";
+import noctisShoesImage from "@/assets/noctis-shoes-hero.png";
 
 const projects = [
   {
@@ -37,6 +40,30 @@ const projects = [
     desc: "A clean, editorial storefront for a modern fashion brand with a seamless shopping experience.",
     url: "https://leovor.com/",
     image: leovorImage,
+  },
+  {
+    title: "Gatehouse Properties",
+    category: "Real Estate",
+    metric: "Live project",
+    desc: "A refined property website showcasing homes and real estate services.",
+    url: "https://gatehouse-properties.vercel.app/",
+    image: gatehouseImage,
+  },
+  {
+    title: "Leveor Suite",
+    category: "Custom Clothing",
+    metric: "Live project",
+    desc: "An elegant tailoring experience highlighting bespoke clothing and personal fittings.",
+    url: "https://leveor-suite.vercel.app/",
+    image: leveorSuiteImage,
+  },
+  {
+    title: "Noctis Shoes",
+    category: "Footwear",
+    metric: "Live project",
+    desc: "A premium footwear storefront introducing an engineered collection of running shoes.",
+    url: "https://noctis-shoes.vercel.app/",
+    image: noctisShoesImage,
   },
 ];
 
