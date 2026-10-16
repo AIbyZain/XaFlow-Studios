@@ -7,6 +7,7 @@ import leovorImage from "@/assets/leovor.png";
 import gatehouseImage from "@/assets/gatehouse-hero.png";
 import leveorSuiteImage from "@/assets/leveor-suite-hero.png";
 import noctisShoesImage from "@/assets/noctis-shoes-hero.png";
+import maisonWatchImage from "@/assets/maison-watch-hero.png";
 
 const projects = [
   {
@@ -64,6 +65,14 @@ const projects = [
     desc: "A premium footwear storefront introducing an engineered collection of running shoes.",
     url: "https://noctis-shoes.vercel.app/",
     image: noctisShoesImage,
+  },
+  {
+    title: "Maison Heure",
+    category: "Luxury Watches",
+    metric: "Live project",
+    desc: "A refined watch showcase centered on craftsmanship, design, and the anatomy of time.",
+    url: "https://maison-watch.vercel.app/",
+    image: maisonWatchImage,
   },
 ];
 
